@@ -3,7 +3,7 @@
 """
 # License: MIT (http://www.opensource.org/licenses/mit-license.php)
 
-__version__ = '2.0.0'
+__version__ = '3.0.0'
 __author__ = "Matt Seymour <matt@mattseymour.net>"
 
 import re
