@@ -3,7 +3,7 @@
 """
 # License: MIT (http://www.opensource.org/licenses/mit-license.php)
 
-__version__ = '2.0.0'
+__version__ = '3.0.0'
 __author__ = "Matt Seymour <matt@mattseymour.net>"
 
 import re
@@ -22,7 +22,8 @@ def validate(nhs_number):
 
 	checkcalc = lambda sum: 11 - (sum % 11)
 
-	l = [int(j) * (10 - (i+1)) for i, j in enumerate(nhs_number[:-1])]
+	l = [int(j) * (10 - i) for i, j in enumerate(nhs_number[:-1])]
 	checksum = checkcalc(sum(l)) if checkcalc(sum(l)) != 11 else 0
 
-	return False if checksum == 10 else True
+	last_digit = int(nhs_number[-1])
+	return False if checksum != last_digit else True
