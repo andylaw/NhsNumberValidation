@@ -9,13 +9,13 @@ except ImportError:
     from distutils.core import setup
 
 setup(
-	name='nhs',
-	version=nhs.__version__,
-	description='function for validating NHS numbers',
-	author='Matt Seymour',
-	author_email='matt@mattseymour.net',
-	url='https://github.com/mattseymour/NhsNumberValidation',
-	packages=['nhs'],
+    name='nhs',
+    version=nhs.__version__,
+    description='function for validating NHS numbers',
+    author='Matt Seymour',
+    author_email='matt@mattseymour.net',
+    url='https://github.com/mattseymour/NhsNumberValidation',
+    packages=['nhs'],
     license='MIT',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
@@ -29,5 +29,5 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
     ],
-	include_package_data=True
+    include_package_data=True
 )
